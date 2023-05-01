@@ -1,0 +1,48 @@
+//variables
+
+@import "../utilidades/mixing";
+@import "../utilidades/extend";
+@import "../utilidades/variables";
+
+/* estilos de nosotros */
+
+.aboutus {
+    @include flex;
+    flex-wrap: wrap;
+    margin: 40px;
+
+    .a-titulo {
+        font-size: 32px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .aboutext-uno {
+        @extend %nuestrotext;
+        padding: 0 20px;
+        margin-right: 20px;
+        flex: 1 1 300px;
+
+        span {
+            display: block;
+
+        }
+    }
+
+    .fotis {
+        margin-right: 20px;
+        flex: 1 1 300px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .aboutext-dos {
+        @extend %nuestrotext;
+        margin-top: 0;
+        margin-left: 20px;
+        flex: 1 1 calc(100% - 320px);
+    }
+}

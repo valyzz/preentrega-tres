@@ -1,0 +1,104 @@
+//variables
+
+@import "../utilidades/mixing";
+@import "../utilidades/extend";
+@import "../utilidades/variables";
+
+/* Estilos servicios */
+.services-grid {
+    .service {
+        .subtitulo {
+            @extend %design;
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        .parrafo {
+            @extend %design;
+
+            &:hover {
+                animation-duration: 0.5s;
+                animation-name: shadow;
+                box-shadow: 0px 0px 10px $color-hover;
+            }
+        }
+
+        .subtitulo:hover {
+            animation-duration: 3s;
+            animation-name: animate__pulse;
+        }
+    }
+}
+
+/* animacion */
+@keyframes animate__pulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shadow {
+    from {
+        box-shadow: none;
+    }
+
+    to {
+        box-shadow: 0px 0px 10px $color-hover;
+    }
+}
+
+
+
+
+/* Estilos específicos para celulares */
+
+@media screen and (max-width: 768px) {
+
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        .service {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .subtitulo {
+                text-align: center;
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+/* Estilos específicos para tablets */
+@media screen and (min-width: 769px) and (max-width:1023px) {
+    .services-grid {
+        @include screenview;
+
+        .service {
+            img {
+                @include medida;
+            }
+        }
+    }
+}
+
+/* Estilos específicos para computadoras */
+@media screen and (min-width:1024px) {
+    .services-grid {
+        @include screenview;
+
+        .service {
+            img {
+                @include medida;
+            }
+        }
+    }
+
+
+}

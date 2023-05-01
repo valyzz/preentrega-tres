@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link de botstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- link de mi css -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- link de animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- link de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Descubre la tranquilidad de una casa campestre en Usiacurí, Atlántico. Disfruta de una estadía única en nuestro hostal turístico rodeado de naturaleza.">
+    <meta name="keywords"
+        content="casa campestre, hostal, turismo, Usiacurí, Atlántico, alojamiento, naturaleza, turismo, relax">
+    <title>Hostal Bastimento</title>
+</head>
+
+<body>
+    <!-- banner principal -->
+    <header id="arriba">
+        <!-- menu bootstrap -->
+        <nav class="navbar navbar-expand-sm">
+            <div class="container">
+                <a class="navbar-brand" d-none d-md-block href="#">
+                    <img class="logo" src="./img/bastimento.png" alt="logo de la empresa">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                        <a class="nav-link" href="./pages/servicios.html">Servicios</a>
+                        <a class="nav-link" href="./pages/galeria.html">Galeria</a>
+                        <a class="nav-link" href="./pages/restaurante.html">Restaurante</a>
+                        <a class="nav-link" href="./pages/sobrenosotros.html">Nosotros</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="begin">
+
+        <h1>Ven a descansar y disfrutar de la naturaleza en nuestra casa campestre!</h1>
+
+        <div class="photo">
+            <img src="./img/casita.jpg" alt="Casa campo Bastimento">
+        </div>
+
+        <h2 class="texto-reserva"> Podrás probar nuestros platos
+            típicos y conocer la cultura local.</h2>
+        <h3 class="text-dos">¡Reserva ya! </h3>
+        <form class="formulario-reserva">
+            <fieldset>
+                <legend> Completa los datos de tu reserva</legend>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="llegada">Fecha de llegada</label>
+                    <input type="date" id="llegada" name="llegada" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="salida">Fecha de salida</label>
+                    <input type="date" id="salida" name="salida" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="huespedes">Huespedes</label>
+                    <input type="number" id="huespedes" name="huespedes" min="1" max="10" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Borrar</button>
+                </div>
+
+            </fieldset>
+        </form>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5543.5553257162865!2d-74.98110717244252!3d10.743302340976896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef677f10a7115f1%3A0xd4c07fb4332d7cc1!2sUsiacuri!5e0!3m2!1sen!2sco!4v1678987802633!5m2!1sen!2sco"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <a href="#arriba">Ir arriba</a>
+
+    </main>
+
+    <!-- Pie de pagina -->
+
+    <footer class="footer-container">
+        <div>
+            <a href="https://wa.me/+573102765707" target="_blank" class="whatsapp-link">
+                <img src="./img/wpp.png" width="50" alt="WhatsApp Icon">
+            </a>
+        </div>
+        <div class="footer-text">
+            <img src="./img/instagram.png" alt="instagram Icon" class="instagram-icon">
+            <a href="https://www.instagram.com/" target="_blank">@Brizza</a>
+        </div>
+        <p>Todos los derechos reservados</p>
+    </footer>
+    <!-- Script de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

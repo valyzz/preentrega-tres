@@ -1,0 +1,99 @@
+//variables
+
+@import "../utilidades/mixing";
+@import "../utilidades/extend";
+@import "../utilidades/variables";
+
+/* Estilos Galeria */
+.contenedor {
+    @include galeria;
+
+    div {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-dos,
+        .img-cinco {
+            display: none;
+        }
+    }
+}
+
+
+/* estilos especificos de celular */
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 50%);
+    }
+
+    .img-uno,
+    .img-tres {
+        grid-row: span 1;
+    }
+
+    .img-cuatro {
+        grid-column: span 2;
+    }
+
+    .img-dos,
+    .img-cinco {
+        display: none;
+    }
+
+}
+
+
+/* Estilos específicos para tablets */
+@media screen and (min-width: 769px) and (max-width:1023px) {
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr auto;
+
+        .img-uno,
+        .img-tres {
+            grid-row: span 1;
+        }
+
+
+        .img-cuatro {
+            display: none;
+        }
+
+    }
+}
+
+
+
+/* Estilos específicos para computadoras */
+@media screen and (min-width:1024px) {
+
+    .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 40% 40% 20%;
+
+        .img-dos,
+        .img-cinco {
+            display: block;
+        }
+
+        .img-uno,
+        .img-tres {
+            grid-row: span 2;
+        }
+
+        .img-dos,
+        .img-cuatro {
+            grid-column: span 1;
+        }
+
+        .img-cinco {
+            grid-column: span 3;
+        }
+
+
+    }
+}
